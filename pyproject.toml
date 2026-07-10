@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bbrecon"
+version = "2.0.0"
+description = "Automated bug bounty reconnaissance tool for the whatnot program on HackerOne"
+readme = "README.md"
+license = {file = "LICENSE"}
+requires-python = ">=3.8"
+authors = [
+    {name = "h4ckr", email = "h4ckr@protonmail.com"}
+]
+keywords = ["bug-bounty", "security", "reconnaissance", "hackerone", "whatnot"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Information Technology",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Security",
+]
+dependencies = [
+    "colorama>=0.4.6",
+]
+
+[project.scripts]
+bbrecon = "bbrecon:main"
+
+[tool.setuptools]
+packages = ["lib"]
+py-modules = ["bbrecon"]
